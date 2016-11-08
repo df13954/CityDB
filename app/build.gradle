@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.ldrong.citydemo"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //本地arr库的配置
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+//配置greendao生成的Java.class位置
+greendao {
+    schemaVersion 1
+    targetGenDir 'src/main/java'
+    //指定生成的保存目录
+    daoPackage 'com.ldrong.citydemo.db'
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile libs.supportV4
+    compile libs.supportAppCompat
+    compile libs.supportDesign
+    testCompile libs.junit
+    //日志
+    compile libs.logUtils
+    //控件获取：黄油刀
+    compile libs.butterknife
+    compile libs.butterknifeApt
+    //数据库
+    compile libs.gd3
+    //json解析
+    compile libs.fastjson
+    compile(name: 'FlowTagLayout', ext: 'aar')//导入tab库
+//    compile 'net.zetetic:android-database-sqlcipher:3.5.4@aar'
+    compile 'net.zetetic:android-database-sqlcipher:+'
+}

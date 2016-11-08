@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/province"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:text="asdf"
+        android:textColor="#383838"
+        android:textSize="16sp"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d9d9d9"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+    </View>
+
+</LinearLayout>

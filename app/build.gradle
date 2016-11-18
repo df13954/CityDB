@@ -54,5 +54,5 @@ dependencies {
     compile libs.fastjson
     compile(name: 'FlowTagLayout', ext: 'aar')//导入tab库
 //    compile 'net.zetetic:android-database-sqlcipher:3.5.4@aar'
-    compile 'net.zetetic:android-database-sqlcipher:+'
+    compile 'net.zetetic:android-database-sqlcipher:3.4.0'
 }

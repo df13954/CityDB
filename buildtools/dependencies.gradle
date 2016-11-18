@@ -95,6 +95,7 @@ ext.libs = [
         greendao3plugin      : "org.greenrobot:greendao-gradle-plugin:3.2.0",
         //apply plugin: 'org.greenrobot.greendao'
         gd3                  : "org.greenrobot:greendao:3.2.0",
+        sqlcipher            : "net.zetetic:android-database-sqlcipher:3.4.0",
 
         //socket IO
         ioSocketEngine       : "io.socket:engine.io-client:0.7.0",
